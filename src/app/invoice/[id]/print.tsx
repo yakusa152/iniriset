@@ -1,0 +1,1 @@
+'use client';import {jsPDF} from 'jspdf';export default function PrintButton(){function save(){const el=document.getElementById('invoice');if(!el)return;const doc=new jsPDF();doc.html(el,{callback:d=>d.save('invoice-iniriset.pdf'),x:10,y:10,width:190,windowWidth:900});}return <button className="btn" style={{marginTop:15}} onClick={save}>Unduh Invoice PDF</button>}
